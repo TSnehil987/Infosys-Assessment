@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /instrumentmgmt
+    
+logging:
+  level:
+    com.infosys.javaassessment: DEBUG
+
+finanstilsynet:
+  instruments:
+    url: https://ssr.finanstilsynet.no/api/v2/instruments/
+    
+#h2 database config
+spring.h2.console.enabled: true
+spring.h2.console.settings.web-allow-others: true
+spring.datasource.url: jdbc:h2:mem:testdb
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+# 10 days = 864000000
+token.expiration_time: 300000
+token.secret: fgdgjgsfjdhgfjhdgjdgjdsfjhdsj
